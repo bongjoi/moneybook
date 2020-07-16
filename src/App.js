@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div>
+      <div className="container">
         <Balance />
         <IncomeAndExpenses />
         <TransactionList />
