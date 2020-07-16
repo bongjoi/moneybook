@@ -1,13 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { v4 as uuidv4 } from 'uuid'
+
+import { GlobalContext } from '../context/GlobalState'
 
 export const AddTransaction = () => {
   const [text, setText] = useState('')
-  const [amount, setAmount] = useState(0)
+  const [amount, setAmount] = useState(null)
+
+  const { addTransaction } = useContext(GlobalContext)
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+
+    const newTransaction = {
+      id: uuidv4(),
+      text,
+      amount: parseInt(amount, 10)
+    }
+
+    addTransaction(newTransaction)
+  }
 
   return (
     <>
       <h2 className="sub-title">내역 추가</h2>
-      <form>
+      <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="text">내용</label>
           <input
