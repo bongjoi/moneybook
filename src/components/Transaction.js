@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { GlobalContext } from '../context/GlobalState'
 import { currencyFormatter } from '../utils/currencyFormatter'
 
-export const Transaction = ({ text, amount }) => {
+export const Transaction = ({ id, text, amount }) => {
+  const { deleteTransaction } = useContext(GlobalContext)
   const sign = amount < 0 ? '-' : '+'
   const currency = currencyFormatter(Math.abs(amount))
 
@@ -15,7 +18,9 @@ export const Transaction = ({ text, amount }) => {
         {sign}
         {currency} 원
       </span>
-      <button className="btn--delete">x</button>
+      <button className="btn--delete" onClick={() => deleteTransaction(id)}>
+        x
+      </button>
     </li>
   )
 }
