@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/moneybook/static/css/main.412ca259.chunk.css",
+    "main.js": "/moneybook/static/js/main.d2740fc5.chunk.js",
+    "main.js.map": "/moneybook/static/js/main.d2740fc5.chunk.js.map",
+    "runtime-main.js": "/moneybook/static/js/runtime-main.f938a012.js",
+    "runtime-main.js.map": "/moneybook/static/js/runtime-main.f938a012.js.map",
+    "static/js/2.3559adb6.chunk.js": "/moneybook/static/js/2.3559adb6.chunk.js",
+    "static/js/2.3559adb6.chunk.js.map": "/moneybook/static/js/2.3559adb6.chunk.js.map",
+    "index.html": "/moneybook/index.html",
+    "precache-manifest.4e17d5eb3f8197b3d75620f695aa984c.js": "/moneybook/precache-manifest.4e17d5eb3f8197b3d75620f695aa984c.js",
+    "service-worker.js": "/moneybook/service-worker.js",
+    "static/css/main.412ca259.chunk.css.map": "/moneybook/static/css/main.412ca259.chunk.css.map",
+    "static/js/2.3559adb6.chunk.js.LICENSE.txt": "/moneybook/static/js/2.3559adb6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f938a012.js",
+    "static/js/2.3559adb6.chunk.js",
+    "static/css/main.412ca259.chunk.css",
+    "static/js/main.d2740fc5.chunk.js"
+  ]
+}
