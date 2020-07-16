@@ -1,11 +1,12 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useRef } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 import { GlobalContext } from '../context/GlobalState'
 
 export const AddTransaction = () => {
   const [text, setText] = useState('')
-  const [amount, setAmount] = useState(null)
+  const [amount, setAmount] = useState('')
+  const inputEl = useRef(null)
 
   const { addTransaction } = useContext(GlobalContext)
 
@@ -19,6 +20,9 @@ export const AddTransaction = () => {
     }
 
     addTransaction(newTransaction)
+    setText('')
+    setAmount('')
+    inputEl.current.focus()
   }
 
   return (
@@ -33,6 +37,7 @@ export const AddTransaction = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="내용을 입력해주세요."
+            ref={inputEl}
           />
         </div>
         <div>
