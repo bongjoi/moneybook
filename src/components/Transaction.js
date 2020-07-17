@@ -6,7 +6,6 @@ import { currencyFormatter } from '../utils/currencyFormatter'
 export const Transaction = ({ id, text, amount }) => {
   const { deleteTransaction } = useContext(GlobalContext)
   const sign = amount < 0 ? '-' : '+'
-  const currency = currencyFormatter(Math.abs(amount))
 
   return (
     <li
@@ -16,7 +15,7 @@ export const Transaction = ({ id, text, amount }) => {
       {text}
       <span>
         {sign}
-        {currency} 원
+        {currencyFormatter(Math.abs(amount))} 원
       </span>
       <button className="btn--delete" onClick={() => deleteTransaction(id)}>
         x

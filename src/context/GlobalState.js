@@ -3,7 +3,9 @@ import AppReducer from './AppReducer'
 
 // Initial State
 const initialState = {
-  transactions: []
+  transactions: localStorage.getItem('transactions')
+    ? JSON.parse(localStorage.getItem('transactions'))
+    : []
 }
 
 // Create context
